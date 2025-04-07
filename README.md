@@ -23,3 +23,37 @@ With clean modular design and reusable components.
 ├── mux_2_1.v              # 2-to-1 multiplexer (used in construction)
 ├── mux16_1.v              # 16-to-1 multiplexer (used for shift logic)
 └── barrel_shifter_tb.v    # Testbench for simulation
+```
+
+## 🧠 How It Works
+
+The design uses two types of multiplexers:
+
+- `mux_2_1.v`: Basic 2-input multiplexer, used to build selection logic  
+- `mux16_1.v`: 16-input multiplexer, used for selecting shifted values
+
+The `barrel_shifter.v` module accepts:
+
+- A **16-bit input**
+- A **4-bit shift amount**
+- A **shift direction control** (left or right)
+
+and outputs the shifted 16-bit result.
+
+---
+
+## 🧪 Testbench
+
+A complete testbench (`barrel_shifter_tb.v`) is provided to verify the functionality of the shifter under different shift amounts and directions.
+
+✅ Simulates various cases of left/right shifts  
+✅ Displays results using `$display` statements  
+✅ Easy to extend with your own test cases
+
+---
+
+## ▶️ How to Run the Simulation
+
+You can simulate the project using any Verilog simulator (ModelSim, Icarus Verilog, Xilinx ISE, etc.)
+
+
